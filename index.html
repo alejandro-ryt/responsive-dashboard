@@ -16,6 +16,8 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="/css/styles.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script async src="/js/cardComponent.js"></script>
 </head>
 
 <body>
@@ -45,7 +47,7 @@
             </nav>
         </aside>
         <main class="mainContent">
-            <div>
+            <div class="chart-container" style="position: relative; height:50vh; width:60vw; margin: 0 auto;">
                 <canvas id="myChart"></canvas>
             </div>
 
@@ -102,7 +104,6 @@
         </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         const ctx = document.getElementById('myChart');
 
@@ -126,7 +127,7 @@
         });
     </script>
 
-    <script src="/js/cardComponent.js"></script>
+
 </body>
 
 </html>
