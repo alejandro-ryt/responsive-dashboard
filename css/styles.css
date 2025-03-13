@@ -123,4 +123,8 @@ nav a:focus {
     .sidebar {
         display: none; /* Hide sidebar on small screens */
     }
+
+    .cardContainer {
+        grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    }
 }

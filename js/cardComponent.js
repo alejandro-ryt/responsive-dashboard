@@ -15,6 +15,7 @@ class CardComponent extends HTMLElement {
             <img src="${imgSource}" loading="lazy" alt="..." />
         `;
         wrapper.className = 'card';
+        wrapper.tabIndex = 0;
 
         const style = document.createElement('style');
         style.textContent = `

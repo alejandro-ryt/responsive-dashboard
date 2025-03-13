@@ -14,7 +14,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+
+    <link rel="stylesheet" href="/css/styles.min.css">
 </head>
 
 <body>
@@ -28,15 +29,15 @@
                     <img src="/assets/svg/dashboard.svg" alt="Dashboard Icon">
                     Dashboard
                 </a>
-                <a href="#" tabindex="1">
+                <a href="#" tabindex="0">
                     <img src="/assets/svg/analytics.svg" alt="Analytics Icon">
                     Analytics
                 </a>
-                <a href="#" tabindex="2">
+                <a href="#" tabindex="0">
                     <img src="/assets/svg/settings.svg" alt="Settings Icon">
                     Settings
                 </a>
-                <a href="#" tabindex="3">
+                <a href="#" tabindex="0">
                     <img src="/assets/svg/profile.svg" alt="Profile Icon">
                     Profile
 
@@ -44,6 +45,10 @@
             </nav>
         </aside>
         <main class="mainContent">
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+
             <section class="cardContainer">
                 <card-component card-title="Lorem Ipsum" card-subtitle="Lorem Ipsum lorem ipsum"
                     card-imgsrc="https://picsum.photos/200"></card-component>
@@ -96,6 +101,30 @@
             <p>Hi I'm a footer!</p>
         </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
 
     <script src="/js/cardComponent.js"></script>
 </body>
